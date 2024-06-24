@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+background-image: url(good.jpg);            
+        }
+        
+    div{
+        padding: 100px;
+        width: 150px;
+        height: 150px;
+        
+        padding-top: 50px;
+        border-radius: 100px;
+   margin: 20px auto;
+   padding: 100px;
+   text-align: center;
+   bottom: auto;
+    }
+    h1{
+    text-align: center;
+    }
+    .sub{
+        margin: 10px auto;
+        border-bottom: 0px ;
+        text-align: center;
+    }
+    </style>
+    </head>
+<body>
+       
+    <body>
+        <div>
+            <h1>LOGIN</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="name"><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+            <span id="passwordError" class="error"></span><br>
+            <button class="sub" onclick="validateLoginForm()">SUBMIT</button>
+        </div>
+    
+        <script>
+            function validateLoginForm() {
+                var name = document.getElementById('name').value;
+                var password = document.getElementById('password').value;
+                var passwordError = document.getElementById('passwordError');
+    
+                // Reset any previous error messages
+                passwordError.textContent = '';
+    
+                // Perform validation
+                if (name.trim() === '') {
+                    passwordError.textContent = 'Please enter your name.';
+                    return false;
+                }
+    
+                if (password.trim() === '') {
+                    passwordError.textContent = 'Please enter your password.';
+                    return false;
+                }
+    
+                // If all validations pass, you can submit the form or proceed with further actions.
+                // For now, let's just alert a success message.
+                alert('Login successful!');
+            }
+        </script>
+    
+</body>
+</html>
+

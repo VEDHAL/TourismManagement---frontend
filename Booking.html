@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <h4>Tour Booking</h4>
+    <div class="container">
+        <div class="changes">
+            <input type="text" id="firstName" placeholder="FirstName"><br>
+            <input type="text" id="lastName" placeholder="LastName"><br>
+            <input type="email" id="email" placeholder="Mail"><br>
+            <input type="number" id="phoneNumber" placeholder="PhoneNumber"><br>
+
+            <input type="text" id="city" placeholder="City"><br>
+            <input type="text" id="place" placeholder="Place"><br>
+            <input type="text" id="destination" placeholder="Destination"><br>
+
+            <input type="Submit" id="submitBtn" value="Submit"><br>
+            <button class="view" ><a href="home.html">view</a></button>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function(event) {
+            // Fetch input field values
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var email = document.getElementById('email').value;
+            var phoneNumber = document.getElementById('phoneNumber').value;
+            var city = document.getElementById('city').value;
+            var place = document.getElementById('place').value;
+            var destination = document.getElementById('destination').value;
+
+            // Perform simple validation
+            if (firstName.trim() === '' || lastName.trim() === '' || email.trim() === '' || phoneNumber.trim() === '' || city.trim() === '' || place.trim() === '' || destination.trim() === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // If all fields are filled, you can perform further actions here, such as sending the data to a server or displaying a success message
+            alert('Form submitted successfully!');
+        });
+    </script>
+</body>
+</html>
